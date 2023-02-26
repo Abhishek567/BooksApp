@@ -125,22 +125,54 @@
 		414DAF6629AA451400CE8C4A /* Gbooks */ = {
 			isa = PBXGroup;
 			children = (
+				4167527629AB787E00786517 /* Components */,
+				4167527529AB786200786517 /* HelperFiles */,
+				4167527429AB785400786517 /* View */,
+				4167527329AB783500786517 /* ViewController */,
 				4132CA7E29AB0C5D008F3B28 /* Models */,
 				414DAF6729AA451400CE8C4A /* AppDelegate.swift */,
 				414DAF6929AA451400CE8C4A /* SceneDelegate.swift */,
-				414DAF6B29AA451400CE8C4A /* BookListView.swift */,
-				414DAF6D29AA451400CE8C4A /* Main.storyboard */,
 				414DAF7329AA451800CE8C4A /* Assets.xcassets */,
 				414DAF7529AA451800CE8C4A /* LaunchScreen.storyboard */,
 				414DAF7829AA451800CE8C4A /* Info.plist */,
 				4132CA8B29AB17A5008F3B28 /* DB */,
-				4132CA8C29AB1BAF008F3B28 /* BookCell.swift */,
-				4167526B29AB405B00786517 /* DictionaryExtension.swift */,
-				4132CA8E29AB24F9008F3B28 /* NetworkManager.swift */,
-				4167526D29AB49EC00786517 /* DBHelper.swift */,
-				4167526F29AB648100786517 /* BookDetailVC.swift */,
 			);
 			path = Gbooks;
+			sourceTree = "<group>";
+		};
+		4167527329AB783500786517 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				414DAF6B29AA451400CE8C4A /* BookListView.swift */,
+				4167526F29AB648100786517 /* BookDetailVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4167527429AB785400786517 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				414DAF6D29AA451400CE8C4A /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4167527529AB786200786517 /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4167526D29AB49EC00786517 /* DBHelper.swift */,
+				4167526B29AB405B00786517 /* DictionaryExtension.swift */,
+				4132CA8E29AB24F9008F3B28 /* NetworkManager.swift */,
+			);
+			path = HelperFiles;
+			sourceTree = "<group>";
+		};
+		4167527629AB787E00786517 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4132CA8C29AB1BAF008F3B28 /* BookCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

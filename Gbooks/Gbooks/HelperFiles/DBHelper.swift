@@ -12,7 +12,7 @@ import UIKit
 func insertBooks(books: [Items]){
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
-    var fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "BookDetail")
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "BookDetail")
     for book in books {
         fetchRequest.predicate = NSPredicate(
             format: "id == %@", book.id ?? ""

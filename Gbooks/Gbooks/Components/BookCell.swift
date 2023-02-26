@@ -20,7 +20,7 @@ class BookCell: UITableViewCell {
                 bookImage.image = UIImage(data: data)
             }
             else if let url = URL(string: bookDetail?.imageLinks?.thumbnail ?? ""){
-                bookImage.sd_setImage(with: url)
+                bookImage.sd_setImage(with: url, placeholderImage: UIImage(named: "book"))
             }
             else{
                 bookImage.image = nil
