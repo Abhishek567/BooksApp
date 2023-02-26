@@ -1,0 +1,6 @@
+framework module Pods_Gbooks {
+  umbrella header "Pods-Gbooks-umbrella.h"
+
+  export *
+  module * { export * }
+}
