@@ -1,7 +1,7 @@
 # BooksApp
 **Notes**
 -> App has functionality to See list of google Books.
--> It's Shows Detail of specific book.
+-> It Shows Detail of specific book.
 -> Shows list of favourite books.
 
 **Instructions to run the code**
@@ -11,7 +11,7 @@
 -> Hit "cmd+R" to run the code.
 
 Improvement Areas
--> Search facility with filter can be added.
--> Book Detail can have more details displayed.
+-> Search facility with filter like search by title, by author can be added.
+-> Book Detail can have more details displayed like published date, page count, ratings, preview links.
 -> UI/UX.
 
