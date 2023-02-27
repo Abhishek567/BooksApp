@@ -18,6 +18,7 @@ struct Items : Codable {
 	var etag : String?
 	var selfLink : String?
 	var volumeInfo : VolumeInfo?
+    var isFav : Bool?
 
 	enum CodingKeys: String, CodingKey {
 

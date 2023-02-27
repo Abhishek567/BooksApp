@@ -22,11 +22,20 @@ class BookListView: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        BooksList = getBooks()
+        let lastDate = UserDefaults.standard.value(forKey: "lastUsed") as? Date ?? Date.now
+        let diff = Calendar.current.dateComponents([.hour], from: lastDate, to: Date.now)
+        if diff.hour ?? 0 < 24{
+            BooksList = getBooks()
+        }
         syncData()
     }
 
-
+    @IBAction func openFavBooks(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "FavBooksVC") as! FavBooksVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return BooksList.count
     }

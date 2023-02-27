@@ -30,21 +30,23 @@ func insertBooks(books: [Items]){
             newbook.id = book.id
             newbook.title = book.volumeInfo?.title
             newbook.author = book.volumeInfo?.authors?.joined(separator: ",")
-
+            
             if let url = book.volumeInfo?.imageLinks?.smallThumbnail {
                 if let url = URL(string: url) {
                     URLSession.shared.dataTask(with: url) { (data, response, error) in
-                      // Error handling...
-                      guard let imageData = data else { return }
-
-                      DispatchQueue.main.async {
-                          newbook.thumb = imageData
-                      }
+                        // Error handling...
+                        guard let imageData = data else { return }
+                        
+                        DispatchQueue.main.async {
+                            newbook.thumb = imageData
+                        }
                     }.resume()
-                  }
+                }
             }
+        }catch{print(error.localizedDescription)}
+        do{
             try context.save()
-        } catch {error.localizedDescription}
+        } catch {print(error.localizedDescription)}
     }
 }
 
